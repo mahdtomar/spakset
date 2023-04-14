@@ -1,0 +1,1720 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  color: var(--main-font-color);
+}
+
+:root {
+  --main-font-color: rgb(255, 132, 0);
+  --main-color: white;
+  --secondery-color: purple;
+  --dark-blue: #203066;
+  --lighter-blue: #385bd4;
+  --position: 50%;
+  --xlarge: 50px;
+  --large: 30px;
+  --normal: 20px;
+  --small: 14px;
+}
+
+.background {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 500;
+}
+
+.background.visible {
+  display: block;
+  opacity: 1;
+}
+
+.nav_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  right: 0px;
+  top: 0%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: var(--main-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 100px 100px transparent;
+          box-shadow: 0px 0px 100px 100px transparent;
+}
+
+.nav_ul.visible {
+  -webkit-box-shadow: 0px 0px 100px 0px black;
+          box-shadow: 0px 0px 100px 0px black;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.nav_ul .close-icon {
+  display: block;
+  cursor: pointer;
+}
+
+.nav_ul li {
+  border-top: 1px solid var(--lighter-blue);
+  width: 100%;
+  display: block;
+}
+
+.nav_ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 32px 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--small);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 18px;
+  padding: 16px;
+  display: block;
+}
+
+.nav_ul li a.active, .nav_ul li a:hover {
+  color: var(--secondery-color);
+}
+
+.close-icon {
+  display: none;
+  width: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.close-icon path {
+  fill: white;
+}
+
+.faded-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-button {
+  font-weight: bold;
+  background-color: var(--secondery-color);
+  color: var(--dark-blue);
+  color: white;
+  font-size: larger;
+  border: 1px solid var(--secondery-color);
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
+}
+
+.main-button:hover {
+  background-color: #9f409f;
+}
+
+.hollow-button {
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--dark-blue);
+  border: 1px solid var(--secondery-color);
+  padding: 16px 40px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
+}
+
+.hollow-button:hover {
+  background-color: var(--secondery-color);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0px 8px;
+}
+
+.secondary-color {
+  color: var(--secondery-color);
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  border-bottom: 1px solid var(--lighter-blue);
+  border-bottom: 1px solid var(--secondery-color);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  background-color: orange;
+}
+
+nav .container {
+  padding: 0px 8px;
+}
+
+nav .container .menu {
+  display: none;
+}
+
+nav .container img {
+  width: 100px;
+}
+
+nav .container ul {
+  list-style: none;
+}
+
+nav .container ul li {
+  display: inline-block;
+}
+
+nav .container ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 32px 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: var(--small);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+nav .container ul li a.active, nav .container ul li a:hover {
+  color: var(--secondery-color);
+}
+
+header {
+  position: relative;
+  background-color: var(--main-color);
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+header .container {
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .car-hero {
+  height: 600px;
+}
+
+header .header-bg {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  max-width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+}
+
+header .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  position: relative;
+  top: 120px;
+  z-index: 3;
+}
+
+header .container span.intro {
+  margin-left: 56px;
+  color: var(--secondery-color);
+  position: relative;
+  display: block;
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+header .container span.intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -70%;
+  width: 50%;
+  height: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--secondery-color);
+}
+
+header .container p.hero {
+  font-size: 57px;
+  font-weight: bold;
+  max-width: 400px;
+}
+
+header .container button {
+  display: block;
+  margin-top: 30px;
+}
+
+header .container .card {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: -30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border: 1px solid var(--lighter-blue);
+  border-radius: 32px;
+  z-index: 3;
+  background-color: var(--main-color);
+}
+
+header .container .card img {
+  border-radius: 50%;
+  width: 60px;
+}
+
+header .container .card div {
+  gap: 18px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header .container .card div p {
+  z-index: 3;
+  font-weight: bold;
+  font-size: var(--normal);
+}
+
+header .container .card div span.faded-text {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+header .steps {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(calc(-50% + 120px));
+          transform: translateX(calc(-50% + 120px));
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+}
+
+header .steps p {
+  width: 100px;
+  position: relative;
+  font-weight: bold;
+}
+
+header .steps p::before {
+  content: "";
+  width: 120%;
+  position: absolute;
+  left: -140%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 1px;
+  background-color: var(--lighter-blue);
+}
+
+.experience {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.experience .container .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  gap: 5%;
+  width: 80%;
+  margin: auto;
+}
+
+.experience .container .grid .details {
+  padding: 50px 30px;
+  background-color: var(--main-font-color);
+  border-radius: 30px;
+}
+
+.experience .container .grid .details span.intro {
+  margin-left: 56px;
+  color: var(--secondery-color);
+  position: relative;
+  display: block;
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.experience .container .grid .details span.intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -70%;
+  width: 50%;
+  height: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: var(--secondery-color);
+}
+
+.experience .container .grid .details p.heading {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 30px 0px 50px;
+  color: white;
+}
+
+.experience .container .grid .details span {
+  font-weight: bold;
+}
+
+.experience .container .grid .details p.faded-text {
+  line-height: 200%;
+}
+
+.experience .container .grid .details > .flex {
+  margin-top: 50px;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experience .container .grid .details .feedback {
+  gap: 30px;
+  width: 300px;
+  line-height: 150%;
+  padding: 9px;
+}
+
+.experience .container .grid .image {
+  background-image: url("/images/carwash3-wrap-bg1.webp");
+  background-size: cover;
+  background-color: white;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  color: var(--main-color);
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.experience .container .grid .image span.important {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.experience .container .grid .image .shield {
+  background-color: #5575e7;
+  display: block;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: 50px auto;
+  border-radius: 50%;
+}
+
+.experience .container .grid .image .shield img {
+  width: 40px;
+}
+
+.strength_points {
+  background-color: var(--main-color);
+  padding-top: 150px;
+}
+
+.strength_points * {
+  color: orange;
+}
+
+.strength_points .container .header {
+  width: 40%;
+  margin: 0px auto 100px;
+}
+
+.strength_points .container .header .small {
+  color: var(--secondery-color);
+  display: block;
+  text-align: center;
+}
+
+.strength_points .container .header .hero {
+  font-size: var(--xlarge);
+  font-weight: bold;
+  color: var(--main-font-color);
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.strength_points .container .header .faded-text {
+  text-align: center;
+  color: orange;
+}
+
+.strength_points .container .flex {
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.strength_points .container .flex > .flex-vertical {
+  gap: 50px;
+}
+
+.strength_points .container .flex > .flex-vertical .feature {
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+  text-align: right;
+  gap: 15px;
+}
+
+.strength_points .container .flex > .flex-vertical .feature .number {
+  text-align: left;
+  font-weight: bold;
+  color: var(--secondery-color);
+}
+
+.strength_points .container .flex > .flex-vertical .feature .number::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  right: 30px;
+  background-color: var(--secondery-color);
+}
+
+.strength_points .container .flex > .flex-vertical .feature .name {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.strength_points .container .flex > .flex-vertical .feature img {
+  width: 100px;
+  padding: 20px;
+  border: 1px solid var(--lighter-blue);
+  border-radius: 8px;
+}
+
+.strength_points .container .flex > .flex-vertical:first-child .feature {
+  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.strength_points .container .flex > .flex-vertical:first-child .feature .number {
+  text-align: left;
+}
+
+.strength_points .container .flex > .flex-vertical:first-child .feature .number::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  left: 30px;
+  background-color: var(--secondery-color);
+}
+
+.strength_points .container .flex > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.slider {
+  position: relative;
+  top: 150px;
+}
+
+.slider .flex {
+  height: 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .flex .text {
+  width: 30%;
+  background-color: white;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 60px;
+  gap: 30px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  background-image: url("./images/carwash3-wrap-bg3.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.slider .flex .text .small {
+  font-size: var(--small);
+  color: var(--main-font-color);
+  font-weight: bold;
+  position: relative;
+}
+
+.slider .flex .text .small::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  right: calc(100% + 5px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider .flex .text .hero {
+  font-size: var(--xlarge);
+  font-weight: bold;
+  color: var(--main-font-color);
+}
+
+.slider .flex .text button {
+  background-color: var(--secondery-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-color: var(--secondery-color);
+}
+
+.slider .flex .text button:hover {
+  background-color: var(--secondery-color);
+}
+
+.slider .flex .slider-container {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+.slider .flex .slider-container .before-after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 5;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+.slider .flex .slider-container .before-after p {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 10px;
+  color: #a6b7f5;
+}
+
+.slider .flex .slider-container .before-after.hidden {
+  opacity: 0;
+}
+
+.slider .flex .slider-container .img-container img {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  height: 600px;
+}
+
+.slider .flex .slider-container .img-container .top {
+  position: absolute;
+  height: 100%;
+  inset: 0;
+  top: 0px;
+  width: var(--position);
+  z-index: 4;
+}
+
+.slider .flex .slider-container input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  z-index: 11;
+}
+
+.slider .flex .slider-container svg {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: var(--position);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  outline: 2px solid white;
+  z-index: 10;
+}
+
+.slider .flex .slider-container .bolder {
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+  left: var(--position);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0px;
+}
+
+.big-container {
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.testmonials {
+  background-image: url("./images/carwash3-section-bg1.webp");
+  background-color: #f0f4f4;
+  margin-bottom: 0px;
+  padding: 150px 0px;
+}
+
+.testmonials .container {
+  margin-top: 150px;
+}
+
+.testmonials .comment {
+  color: var(--main-font-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+.testmonials .comment .intro {
+  font-weight: bold;
+  font-size: var(--xlarge);
+  max-width: 300px;
+}
+
+.testmonials .comment .person {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(transparent));
+  background-image: linear-gradient(bottom, white, transparent);
+  border-radius: 16px;
+}
+
+.testmonials .comment .person img {
+  width: 265px;
+}
+
+.testmonials .comment .card {
+  background-color: white;
+  padding: 50px;
+  border-radius: 16px;
+}
+
+.testmonials .comment .card .flex {
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testmonials .comment .card .small {
+  line-height: 150%;
+  max-width: 500px;
+}
+
+.testmonials .comment .card > p {
+  padding-top: 70px;
+  font-weight: bold;
+  font-size: var(--normal);
+  text-align: right;
+}
+
+.testmonials .comment div .flex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.testmonials .comment div .flex .bubble {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.testmonials .display {
+  margin: 150px auto;
+  position: relative;
+  height: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testmonials .display img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  max-width: 100%;
+}
+
+.testmonials .display .content {
+  z-index: 2;
+}
+
+.testmonials .display .content p {
+  text-align: center;
+  font-size: var(--xlarge);
+  font-weight: bold;
+  color: var(--main-font-color);
+}
+
+.testmonials .display .content p.small {
+  font-size: var(--small);
+  font-weight: normal;
+}
+
+.testmonials .display .content button {
+  display: block;
+  margin: 50px auto;
+}
+
+.testmonials .subscription {
+  background-image: url("./images/carwash3-section-bg2.webp");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: calc(6% / 3);
+  background-size: cover;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.testmonials .subscription .card {
+  padding: 60px 30px;
+  width: 23%;
+  gap: 50px;
+  background-color: white;
+  border-radius: 32px;
+  color: var(--main-color);
+}
+
+.testmonials .subscription .card:last-child {
+  background-color: var(--main-color);
+}
+
+.testmonials .subscription .card:last-child * {
+  color: white;
+}
+
+.testmonials .subscription .card * {
+  width: 90%;
+  text-align: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.testmonials .subscription .card .name {
+  font-size: var(--large);
+  text-transform: capitalize;
+}
+
+.testmonials .subscription .card .price {
+  font-size: var(--xlarge);
+  font-weight: bold;
+}
+
+.testmonials .subscription .card ul {
+  list-style-type: none;
+}
+
+.testmonials .subscription .card ul li {
+  margin: 020px 0px;
+  gap: 15px;
+}
+
+.testmonials .subscription .card ul li.disabled {
+  color: #b7b7b7;
+}
+
+.testmonials .subscription .card ul li svg {
+  width: 20px;
+  background-color: var(--secondery-color);
+  padding: 2px;
+}
+
+.testmonials .subscription .card ul li svg.minus {
+  background-color: #b7b7b7;
+}
+
+.testmonials .subscription .card ul li svg path {
+  fill: white;
+}
+
+footer {
+  padding: 30px 0px 0px;
+  background-color: white;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  color: var(--main-color);
+}
+
+footer .container {
+  position: relative;
+}
+
+footer .container > img {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30%;
+  top: -20%;
+}
+
+footer .offer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+}
+
+footer .offer div p {
+  font-size: var(--large);
+  font-weight: bold;
+  color: var(--main-color);
+  max-width: 75%;
+}
+
+footer .offer div span {
+  display: block;
+  margin-top: 50px;
+  font-size: var(--xlarge);
+  font-weight: bold;
+  color: #c8aff5;
+}
+
+footer .contacts {
+  padding: 30px 0px;
+  margin-top: 50px;
+}
+
+footer .contacts .number {
+  font-size: var(--large);
+  font-weight: bold;
+}
+
+footer .contacts .small {
+  max-width: 250px;
+}
+
+footer .copyrights {
+  padding: 30px 0px;
+}
+
+footer .copyrights button {
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  border-radius: 8px;
+}
+
+@media (max-width: 1280px) {
+  nav {
+    padding: 8px;
+  }
+  nav .container .menu {
+    width: 40px;
+    cursor: pointer;
+  }
+  nav .container .menu path {
+    fill: var(--secondery-color);
+  }
+  nav .container .menu li {
+    display: none;
+  }
+  nav .container .menu li a {
+    padding: 16px 12px;
+  }
+  header .car-hero {
+    top: 70%;
+  }
+  header .container .card {
+    gap: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 3;
+  }
+  .experience {
+    padding-top: 50px;
+  }
+  .experience .container .grid .image .car {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 940px) {
+  .container {
+    width: 100%;
+  }
+  :root {
+    --xlarge: 40px;
+    --large: 20px;
+    --normal: 12px;
+    --small: 8px;
+  }
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .container .menu {
+    display: block;
+  }
+  nav .container ul {
+    display: none;
+  }
+  nav .container .nav_ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    right: 0px;
+    top: 0%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: var(--main-color);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 999;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 100px 100px transparent;
+            box-shadow: 0px 0px 100px 100px transparent;
+  }
+  nav .container .nav_ul.visible {
+    -webkit-box-shadow: 0px 0px 100px 0px black;
+            box-shadow: 0px 0px 100px 0px black;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  nav .container .nav_ul .close-icon {
+    display: block;
+    cursor: pointer;
+  }
+  nav .container .nav_ul li {
+    border-top: 1px solid var(--lighter-blue);
+    width: 100%;
+    display: block;
+  }
+  nav .container .nav_ul li a {
+    font-size: 18px;
+    padding: 16px;
+    display: block;
+  }
+  nav div.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .car-hero {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 40%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  header .container .card {
+    display: none;
+  }
+  header .steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  header .steps p::before {
+    left: -60px;
+    width: 50px;
+  }
+  .experience {
+    background-color: var(--main-color);
+    color: white;
+  }
+  .experience .container {
+    padding: 10px;
+  }
+  .experience .container .grid {
+    width: 100%;
+    display: block;
+  }
+  .experience .container .grid .details p.heading {
+    font-size: var(--xlarge);
+  }
+  .experience .container .grid .details .image {
+    margin-top: 50px;
+  }
+  .strength_points {
+    padding-top: 30px;
+  }
+  .strength_points .container .header {
+    margin: auto;
+  }
+  .strength_points .container .flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .slider {
+    top: 50px;
+  }
+  .slider .flex {
+    height: auto;
+  }
+  .slider .flex .text {
+    background-position: left;
+    margin-top: 0px;
+    width: 80%;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slider .flex .text > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider .flex .text > div button {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .slider .flex .slider-container {
+    width: 80%;
+  }
+  .slider .flex .slider-container .before-after {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .testmonials {
+    margin-bottom: 0px;
+    padding: 180px 0px;
+  }
+  .testmonials .container {
+    margin-top: 0px;
+  }
+  .testmonials .comment {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .testmonials .display {
+    margin: 150px auto;
+    position: relative;
+    height: 375px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testmonials .display img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 100%;
+  }
+  .testmonials .display .content {
+    z-index: 2;
+  }
+  .testmonials .display .content p {
+    text-align: center;
+    font-size: var(--xlarge);
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  .testmonials .display .content p.small {
+    font-size: var(--small);
+    font-weight: normal;
+  }
+  .testmonials .display .content button {
+    display: block;
+    margin: 50px auto;
+  }
+  .testmonials .subscription {
+    background-image: url("./images/carwash3-section-bg2.webp");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: calc(6% / 3);
+    background-size: cover;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testmonials .subscription .card {
+    padding: 60px 30px;
+    min-width: 250px;
+    width: 40%;
+    gap: 50px;
+    margin: 20px 0px;
+  }
+  .testmonials .subscription .card ul li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .container {
+    position: relative;
+  }
+  footer .container > img {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 30%;
+    top: -20%;
+  }
+  footer .offer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .copyrights {
+    padding: 30px 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 500px) {
+  nav .container .logo {
+    width: 80px;
+  }
+  nav div.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header {
+    height: 680px;
+  }
+  header .car-hero {
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 40%;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  header .steps {
+    bottom: 10px;
+  }
+  header .container p.hero {
+    font-size: var(--xlarge);
+  }
+  header .container .card {
+    display: none;
+  }
+  header .steps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    left: 50%;
+    -webkit-transform: translateX(calc(-50% - 20px));
+            transform: translateX(calc(-50% - 20px));
+  }
+  header .steps p {
+    margin: 8px 0px;
+    width: 50%;
+  }
+  header .steps p::before {
+    left: -60px;
+    width: 50px;
+  }
+  .experience {
+    background-color: var(--main-color);
+    color: white;
+    padding-top: 0px;
+  }
+  .experience .container .grid {
+    display: block;
+  }
+  .experience .container .grid .image {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .strength_points {
+    padding-top: 30px;
+  }
+  .strength_points .container .header {
+    width: 90%;
+    margin: auto;
+  }
+  .strength_points .container .flex {
+    margin-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .strength_points .container .flex > .flex-vertical {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%;
+    gap: 50px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
+    text-align: center;
+    gap: 15px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature .number {
+    text-align: left;
+    font-weight: bold;
+    color: var(--secondery-color);
+    display: block;
+    width: 80%;
+  }
+  .strength_points .container .flex > .flex-vertical .feature .number::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    background-color: var(--secondery-color);
+  }
+  .strength_points .container .flex > .flex-vertical .feature .name {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature img {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--lighter-blue);
+    border-radius: 8px;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature .number {
+    text-align: left;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature .number::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    left: unset;
+    background-color: var(--secondery-color);
+  }
+  .strength_points .container .flex > img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .slider {
+    top: 180px;
+  }
+  .slider .flex {
+    height: 380px;
+  }
+  .slider .flex .text {
+    padding: 30px;
+    width: 90%;
+  }
+  .slider .flex .slider-container {
+    width: 90%;
+  }
+  .slider .flex .slider-container .img-container img {
+    height: 100%;
+  }
+  .slider .flex .slider-container .before-after {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .testmonials {
+    margin-bottom: 0px;
+    padding: 330px 0px 50px;
+  }
+  .testmonials .container {
+    margin-top: 0px;
+  }
+  .testmonials .comment {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .testmonials .display {
+    margin: 150px auto;
+    position: relative;
+    height: 375px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testmonials .display img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 100%;
+  }
+  .testmonials .display .content {
+    z-index: 2;
+  }
+  .testmonials .display .content p {
+    text-align: center;
+    font-size: var(--xlarge);
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  .testmonials .display .content p.small {
+    font-size: var(--normal);
+    font-weight: normal;
+  }
+  .testmonials .display .content button {
+    display: block;
+    margin: 50px auto;
+  }
+  .testmonials .subscription {
+    background-image: url("./images/carwash3-section-bg2.webp");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: calc(6% / 3);
+    background-size: cover;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testmonials .subscription .card {
+    padding: 60px 30px;
+    min-width: 250px;
+    width: 90%;
+    gap: 50px;
+    margin: 20px 0px;
+  }
+  .testmonials .subscription .card ul li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer {
+    padding-top: 90px;
+  }
+  footer .container {
+    position: relative;
+  }
+  footer .container > img {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 30%;
+    top: -20%;
+  }
+  footer .offer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  footer .offer div p {
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+  }
+  footer .offer div span {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 30px;
+  }
+  footer .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  footer .contacts .small {
+    font-size: var(--normal);
+    margin-bottom: 20px;
+  }
+  footer .contacts .number {
+    font-size: 16px;
+  }
+  footer .contacts img {
+    margin: 35px auto;
+  }
+  footer .copyrights {
+    padding: 30px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
