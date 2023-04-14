@@ -2,16 +2,19 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "Almarai", sans-serif;
   color: var(--main-font-color);
+  direction: rtl;
 }
 :root {
   // --main-font-color: #223fa7;
-  --main-font-color: rgb(255, 132, 0);
+  --main-font-color: WHITE;
   // --main-color: #223fa7;
-  --main-color: white;
+  // --main-color: white;
+  --main-color: #1c3247;
   // --secondery-color: #77ffc3;
-  --secondery-color: purple;
+  // --secondery-color: #800080;
+  --secondery-color: ORANGE;
   --dark-blue: #203066;
   --lighter-blue: #385bd4;
   --position: 50%;
@@ -96,6 +99,7 @@
 }
 .faded-text {
   color: rgba(255, 255, 255, 0.8);
+  color: var(--secondery-color);
 }
 .main-button {
   font-weight: bold;
@@ -110,7 +114,8 @@
   cursor: pointer;
   transition: 0.3s background;
   &:hover {
-    background-color: rgb(159, 64, 159);
+    background-color: var(--main-color);
+    // color: w;
   }
 }
 .hollow-button {
@@ -131,6 +136,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row-reverse;
 }
 .flex-vertical {
   display: flex;
@@ -147,10 +153,7 @@
 }
 body {
   position: relative;
-  // background-color: var(--main-color);
-  // height: 10000px;
 }
-
 nav {
   border-bottom: 1px solid var(--lighter-blue);
   border-bottom: 1px solid var(--secondery-color);
@@ -172,13 +175,15 @@ nav {
     }
     ul {
       list-style: none;
+      display: flex;
+      flex-direction: row-reverse;
       li {
         display: inline-block;
         a {
           display: block;
           text-decoration: none;
           color: white;
-          padding: 32px 12px;
+          padding: 16px 12px;
           text-transform: uppercase;
           font-weight: bold;
           font-size: var(--small);
@@ -186,7 +191,7 @@ nav {
           transition: 0.2s;
           &.active,
           &:hover {
-            color: var(--secondery-color);
+            color: var(--main-color);
           }
         }
       }
@@ -306,13 +311,16 @@ header {
   }
   .steps {
     position: absolute;
-    width: 80%;
+    width: 90%;
     margin: auto;
     bottom: 5%;
     left: 50%;
-    transform: translateX(calc(-50% + 120px));
+    // transform: translateX(calc(-50% + 120px));
+    transform: translateX(calc(-50%));
     justify-content: space-evenly;
     color: white;
+    display: flex;
+    justify-content: space-evenly;
     p {
       width: 100px;
       // background-color: red;
@@ -322,7 +330,7 @@ header {
         content: "";
         width: 120%;
         position: absolute;
-        left: -140%;
+        left: -120%;
         top: 50%;
         transform: translateY(-50%);
         // width: 10px;
@@ -334,7 +342,7 @@ header {
 }
 .experience {
   background-color: var(--main-color);
-  color: white;
+  // color: var(--secondery-color);
   .container {
     .grid {
       // margin-top: 50px;
@@ -346,8 +354,9 @@ header {
       .details {
         padding: 50px 30px;
         // background-color: var(--lighter-blue);
-        background-color: var(--main-font-color);
+        // background-color: lightgray;
         border-radius: 30px;
+        // .faded-text{}
         span.intro {
           margin-left: 56px;
           color: var(--secondery-color);
@@ -363,7 +372,7 @@ header {
             display: block;
             position: absolute;
             top: 50%;
-            left: -70%;
+            left: -90%;
             width: 50%;
             height: 2px;
             transform: translateY(-50%);
@@ -374,7 +383,7 @@ header {
           font-size: 56px;
           font-weight: bold;
           margin: 30px 0px 50px;
-          color: white;
+          color: var(--secondery-color);
           // max-width: 500px;
         }
         span {
@@ -431,7 +440,6 @@ header {
     }
   }
 }
-
 .strength_points {
   background-color: var(--main-color);
   padding-top: 150px;
@@ -535,6 +543,7 @@ header {
   .flex {
     height: 600px;
     justify-content: center;
+    flex-direction: row-reverse;
     .text {
       width: 30%;
       background-color: white;
@@ -550,7 +559,7 @@ header {
       background-position: bottom;
       .small {
         font-size: var(--small);
-        color: var(--main-font-color);
+        color: var(--main-color);
         font-weight: bold;
         position: relative;
         &::before {
@@ -567,7 +576,7 @@ header {
       .hero {
         font-size: var(--xlarge);
         font-weight: bold;
-        color: var(--main-font-color);
+        color: var(--main-color);
       }
       button {
         background-color: var(--secondery-color);
@@ -582,6 +591,7 @@ header {
       height: 100%;
       width: fit-content;
       position: relative;
+      direction: ltr;
       .before-after {
         position: absolute;
         height: 100%;
@@ -622,6 +632,7 @@ header {
       }
       input {
         position: absolute;
+        direction: ltr;
         inset: 0;
         width: 100%;
         height: 100%;
@@ -668,15 +679,25 @@ header {
     margin-top: 150px;
   }
   .comment {
-    color: var(--main-font-color);
+    color: var(--main-color);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    // flex-direction: row-reverse;
     gap: 50px;
     .intro {
       font-weight: bold;
       font-size: var(--xlarge);
       max-width: 300px;
+      p {
+        color: var(--main-color);
+      }
+      .flex {
+        justify-content: right;
+        p {
+          color: var(--main-color);
+        }
+      }
     }
     .person {
       background-image: linear-gradient(bottom, white, transparent);
@@ -694,10 +715,12 @@ header {
         align-items: center;
       }
       .small {
+        color: var(--main-color);
         line-height: 150%;
         max-width: 500px;
       }
       > p {
+        color: var(--main-color);
         padding-top: 70px;
         font-weight: bold;
         font-size: var(--normal);
@@ -741,7 +764,7 @@ header {
         text-align: center;
         font-size: var(--xlarge);
         font-weight: bold;
-        color: var(--main-font-color);
+        color: var(--main-color);
         &.small {
           font-size: var(--small);
           font-weight: normal;
@@ -765,7 +788,11 @@ header {
       gap: 50px;
       background-color: white;
       border-radius: 32px;
-      color: var(--main-color);
+
+      li,
+      span {
+        color: var(--main-color);
+      }
       &:last-child {
         background-color: var(--main-color);
         * {
@@ -829,6 +856,7 @@ footer {
   .offer {
     align-items: center;
     height: 250px;
+    flex-direction: row;
     div {
       p {
         font-size: var(--large);
@@ -878,7 +906,7 @@ footer {
         width: 40px;
         cursor: pointer;
         path {
-          fill: var(--secondery-color);
+          fill: var(--main-color);
         }
         li {
           display: none;
@@ -1163,14 +1191,33 @@ footer {
   }
   header {
     height: 680px;
-    .car-hero {
-      top: 60%;
-      transform: translateY(-50%);
-      left: 40%;
-      transform: scale(1.5);
+    .container {
+      flex-direction: column;
+      .car-hero {
+        top: 60%;
+        transform: translateY(50%);
+        left: 40%;
+        // transform: scale(1.5);
+        margin-top: 65px;
+        width: 34%;
+        object-fit: contain;
+        margin-top: 65px;
+        transform: none;
+        height: auto;
+        width: 200px;
+        margin-top: 0px;
+      }
+      margin-top: 0px;
     }
     .steps {
       bottom: 10px;
+      transform: none;
+      position: st;
+      p {
+        position: relative;
+        right: 50%;
+        transform: translateX(-50%);
+      }
     }
     .container {
       p.hero {
@@ -1187,13 +1234,11 @@ footer {
       grid-template-columns: 1fr 1fr;
       justify-items: end;
       left: 50%;
-      transform: translateX(calc(-50% - 20px));
       p {
         margin: 8px 0px;
         width: 50%;
-
         &::before {
-          left: -60px;
+          left: -45px;
           width: 50px;
         }
       }

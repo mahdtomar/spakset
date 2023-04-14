@@ -3,14 +3,15 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "IBM Plex Sans", "Roboto", sans-serif;
+  font-family: "Almarai", sans-serif;
   color: var(--main-font-color);
+  direction: rtl;
 }
 
 :root {
-  --main-font-color: rgb(255, 132, 0);
-  --main-color: white;
-  --secondery-color: purple;
+  --main-font-color: WHITE;
+  --main-color: #1c3247;
+  --secondery-color: ORANGE;
   --dark-blue: #203066;
   --lighter-blue: #385bd4;
   --position: 50%;
@@ -121,6 +122,7 @@
 
 .faded-text {
   color: rgba(255, 255, 255, 0.8);
+  color: var(--secondery-color);
 }
 
 .main-button {
@@ -139,7 +141,7 @@
 }
 
 .main-button:hover {
-  background-color: #9f409f;
+  background-color: var(--main-color);
 }
 
 .hollow-button {
@@ -169,6 +171,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .flex-vertical {
@@ -223,6 +229,13 @@ nav .container img {
 
 nav .container ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 nav .container ul li {
@@ -233,7 +246,7 @@ nav .container ul li a {
   display: block;
   text-decoration: none;
   color: white;
-  padding: 32px 12px;
+  padding: 16px 12px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: var(--small);
@@ -243,7 +256,7 @@ nav .container ul li a {
 }
 
 nav .container ul li a.active, nav .container ul li a:hover {
-  color: var(--secondery-color);
+  color: var(--main-color);
 }
 
 header {
@@ -379,16 +392,20 @@ header .container .card div span.faded-text {
 
 header .steps {
   position: absolute;
-  width: 80%;
+  width: 90%;
   margin: auto;
   bottom: 5%;
   left: 50%;
-  -webkit-transform: translateX(calc(-50% + 120px));
-          transform: translateX(calc(-50% + 120px));
+  -webkit-transform: translateX(calc(-50%));
+          transform: translateX(calc(-50%));
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 header .steps p {
@@ -401,7 +418,7 @@ header .steps p::before {
   content: "";
   width: 120%;
   position: absolute;
-  left: -140%;
+  left: -120%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -411,7 +428,6 @@ header .steps p::before {
 
 .experience {
   background-color: var(--main-color);
-  color: white;
 }
 
 .experience .container .grid {
@@ -426,7 +442,6 @@ header .steps p::before {
 
 .experience .container .grid .details {
   padding: 50px 30px;
-  background-color: var(--main-font-color);
   border-radius: 30px;
 }
 
@@ -446,7 +461,7 @@ header .steps p::before {
   display: block;
   position: absolute;
   top: 50%;
-  left: -70%;
+  left: -90%;
   width: 50%;
   height: 2px;
   -webkit-transform: translateY(-50%);
@@ -458,7 +473,7 @@ header .steps p::before {
   font-size: 56px;
   font-weight: bold;
   margin: 30px 0px 50px;
-  color: white;
+  color: var(--secondery-color);
 }
 
 .experience .container .grid .details span {
@@ -647,6 +662,10 @@ header .steps p::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .slider .flex .text {
@@ -668,7 +687,7 @@ header .steps p::before {
 
 .slider .flex .text .small {
   font-size: var(--small);
-  color: var(--main-font-color);
+  color: var(--main-color);
   font-weight: bold;
   position: relative;
 }
@@ -688,7 +707,7 @@ header .steps p::before {
 .slider .flex .text .hero {
   font-size: var(--xlarge);
   font-weight: bold;
-  color: var(--main-font-color);
+  color: var(--main-color);
 }
 
 .slider .flex .text button {
@@ -708,6 +727,7 @@ header .steps p::before {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  direction: ltr;
 }
 
 .slider .flex .slider-container .before-after {
@@ -758,6 +778,7 @@ header .steps p::before {
 
 .slider .flex .slider-container input {
   position: absolute;
+  direction: ltr;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -811,7 +832,7 @@ header .steps p::before {
 }
 
 .testmonials .comment {
-  color: var(--main-font-color);
+  color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -828,6 +849,20 @@ header .steps p::before {
   font-weight: bold;
   font-size: var(--xlarge);
   max-width: 300px;
+}
+
+.testmonials .comment .intro p {
+  color: var(--main-color);
+}
+
+.testmonials .comment .intro .flex {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.testmonials .comment .intro .flex p {
+  color: var(--main-color);
 }
 
 .testmonials .comment .person {
@@ -854,11 +889,13 @@ header .steps p::before {
 }
 
 .testmonials .comment .card .small {
+  color: var(--main-color);
   line-height: 150%;
   max-width: 500px;
 }
 
 .testmonials .comment .card > p {
+  color: var(--main-color);
   padding-top: 70px;
   font-weight: bold;
   font-size: var(--normal);
@@ -917,7 +954,7 @@ header .steps p::before {
   text-align: center;
   font-size: var(--xlarge);
   font-weight: bold;
-  color: var(--main-font-color);
+  color: var(--main-color);
 }
 
 .testmonials .display .content p.small {
@@ -948,6 +985,10 @@ header .steps p::before {
   gap: 50px;
   background-color: white;
   border-radius: 32px;
+}
+
+.testmonials .subscription .card li,
+.testmonials .subscription .card span {
   color: var(--main-color);
 }
 
@@ -1030,6 +1071,10 @@ footer .offer {
       -ms-flex-align: center;
           align-items: center;
   height: 250px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 footer .offer div p {
@@ -1086,7 +1131,7 @@ footer .copyrights button {
     cursor: pointer;
   }
   nav .container .menu path {
-    fill: var(--secondery-color);
+    fill: var(--main-color);
   }
   nav .container .menu li {
     display: none;
@@ -1412,16 +1457,40 @@ footer .copyrights button {
   header {
     height: 680px;
   }
-  header .car-hero {
+  header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+  }
+  header .container .car-hero {
     top: 60%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
     left: 40%;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    margin-top: 65px;
+    width: 34%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-top: 65px;
+    -webkit-transform: none;
+            transform: none;
+    height: auto;
+    width: 200px;
+    margin-top: 0px;
   }
   header .steps {
     bottom: 10px;
+    -webkit-transform: none;
+            transform: none;
+    position: st;
+  }
+  header .steps p {
+    position: relative;
+    right: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   header .container p.hero {
     font-size: var(--xlarge);
@@ -1441,15 +1510,13 @@ footer .copyrights button {
         grid-template-columns: 1fr 1fr;
     justify-items: end;
     left: 50%;
-    -webkit-transform: translateX(calc(-50% - 20px));
-            transform: translateX(calc(-50% - 20px));
   }
   header .steps p {
     margin: 8px 0px;
     width: 50%;
   }
   header .steps p::before {
-    left: -60px;
+    left: -45px;
     width: 50px;
   }
   .experience {
