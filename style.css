@@ -1605,12 +1605,13 @@ footer .copyrights button {
   }
   nav div.flex {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   header {
     height: 680px;
+    padding-top: 200px;
   }
   header .container {
     -webkit-box-orient: vertical;
@@ -1625,14 +1626,13 @@ footer .copyrights button {
             transform: translateY(50%);
     left: 40%;
     margin-top: 65px;
-    width: 34%;
+    width: 70%;
     -o-object-fit: contain;
        object-fit: contain;
     margin-top: 65px;
     -webkit-transform: none;
             transform: none;
     height: auto;
-    width: 200px;
     margin-top: 0px;
   }
   header .steps {
@@ -1731,7 +1731,7 @@ footer .copyrights button {
     height: 1px;
     position: absolute;
     top: 9px;
-    right: 50%;
+    right: 30%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
     background-color: var(--secondery-color);
@@ -1743,8 +1743,6 @@ footer .copyrights button {
   }
   .strength_points .container .flex > .flex-vertical .feature img {
     width: 100%;
-    padding: 20px;
-    border: 1px solid var(--lighter-blue);
     border-radius: 8px;
   }
   .strength_points .container .flex > .flex-vertical:first-child .feature {
@@ -1762,7 +1760,7 @@ footer .copyrights button {
     height: 1px;
     position: absolute;
     top: 9px;
-    right: 50%;
+    right: 30%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
     left: unset;

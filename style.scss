@@ -1347,25 +1347,24 @@ footer {
       }
     }
     div.flex {
-      flex-direction: row;
+      flex-direction: row-reverse;
     }
   }
   header {
     height: 680px;
+    padding-top: 200px;
     .container {
       flex-direction: column;
       .car-hero {
         top: 60%;
         transform: translateY(50%);
         left: 40%;
-        // transform: scale(1.5);
         margin-top: 65px;
-        width: 34%;
+        width: 70%;
         object-fit: contain;
         margin-top: 65px;
         transform: none;
         height: auto;
-        width: 200px;
         margin-top: 0px;
       }
       margin-top: 0px;
@@ -1453,7 +1452,7 @@ footer {
                 height: 1px;
                 position: absolute;
                 top: 9px;
-                right: 50%;
+                right: 30%;
                 transform: translateX(50%);
 
                 background-color: var(--secondery-color);
@@ -1466,9 +1465,7 @@ footer {
             }
 
             img {
-              width: 100%;
-              padding: 20px;
-              border: 1px solid var(--lighter-blue);
+              width: 100%;  
               border-radius: 8px;
             }
           }
@@ -1484,7 +1481,7 @@ footer {
                   height: 1px;
                   position: absolute;
                   top: 9px;
-                  right: 50%;
+                  right: 30%;
                   transform: translateX(50%);
                   left: unset;
                   background-color: var(--secondery-color);
