@@ -4,7 +4,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Almarai", sans-serif;
-  color: var(--main-font-color);
   direction: rtl;
 }
 
@@ -262,14 +261,18 @@ nav .container ul li a.active, nav .container ul li a:hover {
 header {
   position: relative;
   background-color: var(--main-color);
-  height: 100vh;
+  height: 90vh;
   color: white;
   overflow: hidden;
   z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #186094;
+  background: radial-gradient(circle, #186094 0%, var(--main-color) 100%);
 }
 
 header .container {
-  margin-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +290,7 @@ header .container .car-hero {
 
 header .header-bg {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 0px;
   max-width: 100%;
   -webkit-transform: translateY(-50%);
@@ -301,7 +304,6 @@ header .container {
           justify-content: space-between;
   width: 90%;
   position: relative;
-  top: 120px;
   z-index: 3;
 }
 
@@ -428,6 +430,7 @@ header .steps p::before {
 
 .experience {
   background-color: var(--main-color);
+  padding-bottom: 200px;
 }
 
 .experience .container .grid {
@@ -441,39 +444,16 @@ header .steps p::before {
 }
 
 .experience .container .grid .details {
-  padding: 50px 30px;
-  border-radius: 30px;
-}
-
-.experience .container .grid .details span.intro {
-  margin-left: 56px;
-  color: var(--secondery-color);
-  position: relative;
-  display: block;
-  width: 80px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.experience .container .grid .details span.intro::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: -90%;
-  width: 50%;
-  height: 2px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  padding: 20px;
   background-color: var(--secondery-color);
+  border-radius: 30px;
 }
 
 .experience .container .grid .details p.heading {
   font-size: 56px;
   font-weight: bold;
-  margin: 30px 0px 50px;
-  color: var(--secondery-color);
+  margin: 50px 0px 50px;
+  color: white;
 }
 
 .experience .container .grid .details span {
@@ -482,6 +462,7 @@ header .steps p::before {
 
 .experience .container .grid .details p.faded-text {
   line-height: 200%;
+  color: var(--main-color);
 }
 
 .experience .container .grid .details > .flex {
@@ -495,6 +476,11 @@ header .steps p::before {
           align-items: center;
 }
 
+.experience .container .grid .details > .flex .main-button {
+  background-color: white;
+  color: var(--main-color);
+}
+
 .experience .container .grid .details .feedback {
   gap: 30px;
   width: 300px;
@@ -503,7 +489,6 @@ header .steps p::before {
 }
 
 .experience .container .grid .image {
-  background-image: url("/images/carwash3-wrap-bg1.webp");
   background-size: cover;
   background-color: white;
   border-radius: 30px;
@@ -512,6 +497,73 @@ header .steps p::before {
   font-size: 1.5em;
   text-transform: capitalize;
   font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience .container .grid .image .benifits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 20px;
+  z-index: 3;
+}
+
+.experience .container .grid .image .benifits p {
+  margin: 20px 0px;
+}
+
+.experience .container .grid .image .benifits p:nth-child(1) {
+  color: var(--main-color);
+}
+
+.experience .container .grid .image .benifits p:nth-child(2) {
+  color: var(--secondery-color);
+}
+
+.experience .container .grid .image .benifits p:nth-child(3) {
+  color: red;
+}
+
+.experience .container .grid .image .benifits p span {
+  display: block;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.experience .container .grid .image .benifits p span.counter {
+  display: inline;
+}
+
+.experience .container .grid .image .floating_images {
+  position: absolute;
+  z-index: 2;
+}
+
+.experience .container .grid .image .floating_images.plate {
+  bottom: -10px;
+  left: -10px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.experience .container .grid .image .floating_images.burger {
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .experience .container .grid .image span.important {
@@ -520,7 +572,6 @@ header .steps p::before {
 }
 
 .experience .container .grid .image .shield {
-  background-color: #5575e7;
   display: block;
   text-align: center;
   width: 120px;
@@ -528,21 +579,16 @@ header .steps p::before {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  margin: 50px auto;
-  border-radius: 50%;
+  margin: 20px auto;
 }
 
 .experience .container .grid .image .shield img {
-  width: 40px;
+  width: 150px;
 }
 
 .strength_points {
-  background-color: var(--main-color);
+  background-color: #cbbead;
   padding-top: 150px;
-}
-
-.strength_points * {
-  color: orange;
 }
 
 .strength_points .container .header {
@@ -551,7 +597,7 @@ header .steps p::before {
 }
 
 .strength_points .container .header .small {
-  color: var(--secondery-color);
+  color: var(--main-color);
   display: block;
   text-align: center;
 }
@@ -559,14 +605,14 @@ header .steps p::before {
 .strength_points .container .header .hero {
   font-size: var(--xlarge);
   font-weight: bold;
-  color: var(--main-font-color);
+  color: var(--main-color);
   text-align: center;
   margin: 20px 0px;
 }
 
 .strength_points .container .header .faded-text {
   text-align: center;
-  color: orange;
+  color: var(--main-color);
 }
 
 .strength_points .container .flex {
@@ -582,18 +628,22 @@ header .steps p::before {
 
 .strength_points .container .flex > .flex-vertical .feature {
   position: relative;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 50%;
   text-align: right;
   gap: 15px;
 }
 
+.strength_points .container .flex > .flex-vertical .feature .faded-text {
+  color: var(--main-color);
+}
+
 .strength_points .container .flex > .flex-vertical .feature .number {
   text-align: left;
   font-weight: bold;
-  color: var(--secondery-color);
+  color: var(--main-color);
 }
 
 .strength_points .container .flex > .flex-vertical .feature .number::before {
@@ -603,24 +653,21 @@ header .steps p::before {
   position: absolute;
   top: 9px;
   right: 30px;
-  background-color: var(--secondery-color);
+  background-color: var(--main-color);
 }
 
 .strength_points .container .flex > .flex-vertical .feature .name {
-  color: white;
   font-weight: bold;
   font-size: 22px;
+  color: var(--main-color);
 }
 
 .strength_points .container .flex > .flex-vertical .feature img {
   width: 100px;
-  padding: 20px;
-  border: 1px solid var(--lighter-blue);
-  border-radius: 8px;
 }
 
 .strength_points .container .flex > .flex-vertical:first-child .feature {
-  text-align: left;
+  text-align: right;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -637,7 +684,7 @@ header .steps p::before {
   position: absolute;
   top: 9px;
   left: 30px;
-  background-color: var(--secondery-color);
+  background-color: var(--main-color);
 }
 
 .strength_points .container .flex > img {
@@ -657,6 +704,12 @@ header .steps p::before {
   top: 150px;
 }
 
+.slider .container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .slider .flex {
   height: 600px;
   -webkit-box-pack: center;
@@ -669,6 +722,8 @@ header .steps p::before {
 }
 
 .slider .flex .text {
+  -webkit-box-shadow: 20px 20px 50px 0px gray;
+          box-shadow: 20px 20px 50px 0px gray;
   width: 30%;
   background-color: white;
   height: 100%;
@@ -683,6 +738,7 @@ header .steps p::before {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+  z-index: 9;
 }
 
 .slider .flex .text .small {
@@ -722,6 +778,8 @@ header .steps p::before {
 }
 
 .slider .flex .slider-container {
+  -webkit-box-shadow: 20px 20px 50px 0px gray;
+          box-shadow: 20px 20px 50px 0px gray;
   height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -816,19 +874,60 @@ header .steps p::before {
 }
 
 .big-container {
-  background-color: var(--main-color);
+  background-color: #cbbead;
   position: relative;
+  z-index: 8;
 }
 
 .testmonials {
-  background-image: url("./images/carwash3-section-bg1.webp");
-  background-color: #f0f4f4;
+  background-color: white;
   margin-bottom: 0px;
-  padding: 150px 0px;
+  padding: 0px 0px 50px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.testmonials .hovering-images {
+  position: absolute;
+  z-index: 1;
+}
+
+.testmonials .hovering-images.orange-juice {
+  top: 30%;
+  left: 0px;
+}
+
+.testmonials .hovering-images.red-orange {
+  top: 130px;
+  left: 0px;
+}
+
+.testmonials .hovering-images.lemon {
+  top: 60%;
+  left: -120px;
+}
+
+.testmonials .hovering-images.strawberry {
+  top: 50%;
+  right: 0px;
+}
+
+.testmonials .hovering-images.orange {
+  top: 180px;
+  right: 0px;
+}
+
+.testmonials .hovering-images.count-number {
+  position: relative;
+  display: block;
+  margin: 150px auto 50px;
+  width: 60%;
 }
 
 .testmonials .container {
-  margin-top: 150px;
+  margin-top: 0px;
+  z-index: 2;
 }
 
 .testmonials .comment {
@@ -843,6 +942,7 @@ header .steps p::before {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+  z-index: 2;
 }
 
 .testmonials .comment .intro {
@@ -968,7 +1068,6 @@ header .steps p::before {
 }
 
 .testmonials .subscription {
-  background-image: url("./images/carwash3-section-bg2.webp");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -985,6 +1084,8 @@ header .steps p::before {
   gap: 50px;
   background-color: white;
   border-radius: 32px;
+  z-index: 2;
+  border: 2px solid var(--main-color);
 }
 
 .testmonials .subscription .card li,
@@ -1051,6 +1152,7 @@ footer {
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   color: var(--main-color);
+  background-color: var(--secondery-color);
 }
 
 footer .container {
@@ -1075,6 +1177,12 @@ footer .offer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+footer .offer button {
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  color: white;
 }
 
 footer .offer div p {
