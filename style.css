@@ -1266,7 +1266,7 @@ footer .copyrights button {
 
 @media (max-width: 940px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
   :root {
     --xlarge: 40px;
@@ -1336,17 +1336,16 @@ footer .copyrights button {
   }
   nav div.flex {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
-  header .car-hero {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 40%;
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+  header .container div .hero {
+    font-size: 48px;
+  }
+  header .container .car-hero {
+    height: auto;
+    width: 50%;
   }
   header .container .card {
     display: none;
@@ -1377,8 +1376,11 @@ footer .copyrights button {
   .experience .container .grid .details p.heading {
     font-size: var(--xlarge);
   }
-  .experience .container .grid .details .image {
+  .experience .container .grid .image {
     margin-top: 50px;
+  }
+  .experience .container .grid .image .shield img {
+    width: 90px;
   }
   .strength_points {
     padding-top: 30px;
@@ -1387,16 +1389,24 @@ footer .copyrights button {
     margin: auto;
   }
   .strength_points .container .flex {
+    margin-top: 50px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .strength_points .container .flex .flex-vertical {
+    width: 25%;
   }
   .slider {
     top: 50px;
   }
   .slider .flex {
     height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .slider .flex .text {
     background-position: left;
@@ -1409,6 +1419,7 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 60px 40px;
   }
   .slider .flex .text > div {
     display: -webkit-box;
@@ -1424,6 +1435,7 @@ footer .copyrights button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
   .slider .flex .text > div button {
     height: -webkit-fit-content;
@@ -1442,6 +1454,38 @@ footer .copyrights button {
   .testmonials {
     margin-bottom: 0px;
     padding: 180px 0px;
+  }
+  .testmonials .hovering-images {
+    position: absolute;
+    z-index: 1;
+  }
+  .testmonials .hovering-images.orange-juice {
+    top: 30%;
+    left: 0px;
+    width: 350px;
+  }
+  .testmonials .hovering-images.red-orange {
+    top: 130px;
+    left: 0px;
+  }
+  .testmonials .hovering-images.lemon {
+    top: 60%;
+    left: -120px;
+  }
+  .testmonials .hovering-images.strawberry {
+    top: 50%;
+    right: 0px;
+  }
+  .testmonials .hovering-images.orange {
+    top: 50px;
+    right: 0px;
+    width: 250px;
+  }
+  .testmonials .hovering-images.count-number {
+    position: relative;
+    display: block;
+    margin: 0px auto 50px;
+    width: 60%;
   }
   .testmonials .container {
     margin-top: 0px;
@@ -1495,7 +1539,6 @@ footer .copyrights button {
     margin: 50px auto;
   }
   .testmonials .subscription {
-    background-image: url("./images/carwash3-section-bg2.webp");
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1519,6 +1562,9 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   footer .container {
     position: relative;
@@ -1536,6 +1582,7 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: auto;
   }
   footer .contacts {
     -webkit-box-orient: horizontal;
