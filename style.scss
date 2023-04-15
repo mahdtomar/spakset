@@ -358,7 +358,7 @@ header {
       display: grid;
       grid-template-columns: 70% 30%;
       gap: 5%;
-      width: 80%;
+      width:75%;
       margin: auto;
       .details {
         padding: 20px;
@@ -471,11 +471,13 @@ header {
             bottom: -10px;
             left: -10px;
             transform: scale(0.9);
+            opacity: 0.7;
           }
           &.burger {
             right: 0px;
             top: 50%;
             transform: translateY(-50%);
+            opacity: 0.8;
           }
         }
         span.important {
@@ -494,7 +496,7 @@ header {
           // padding: 40px;
           // border-radius: 50%;
           img {
-            width: 150px;
+            width: 90px;
           }
         }
       }
