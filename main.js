@@ -6,11 +6,9 @@ const background = document.querySelector("background");
 const obseveTargets = [];
 obseveTargets.push(number);
 counterTargets.forEach((price) => {
-  // console.log(price);
   obseveTargets.push(price);
 });
 
-// console.log(counterTargets);
 function increment(count, target, targervalue) {
   setInterval(() => {
     if (count < targervalue) {
@@ -35,11 +33,9 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
     let targetNumber = parseInt(entry.target.getAttribute("data-value"));
-    // console.log(parseInt(targetNumber));
     entry.target.textContent = 0;
     increment(count, target, targetNumber);
   });
-  // console.log(entries);
 });
 obseveTargets.forEach((target) => {
   observer.observe(target);

@@ -10,10 +10,11 @@
   --main-font-color: WHITE;
   // --main-color: #223fa7;
   // --main-color: white;
-  --main-color: #1c3247;
+  --main-color: #1e2f41;
   // --secondery-color: #77ffc3;
   // --secondery-color: #800080;
   --secondery-color: ORANGE;
+  --secondery-color: #f1801f;
   --dark-blue: #203066;
   --lighter-blue: #385bd4;
   --position: 50%;
@@ -154,8 +155,8 @@ body {
   position: relative;
 }
 nav {
-  border-bottom: 1px solid var(--lighter-blue);
-  border-bottom: 1px solid var(--secondery-color);
+  // border-bottom: 1px solid var(--lighter-blue);
+  border-bottom: 1px solid #f1801f;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -163,9 +164,12 @@ nav {
   width: 100%;
   // background-color: rgba($color: #223fa7, $alpha: 0.9);
   // background-color: var(--main-color);
-  background-color: orange;
+  background-color: #f1801f;
   .container {
     padding: 0px 8px;
+    .logo {
+      width: 180px;
+    }
     .menu {
       display: none;
     }
@@ -208,11 +212,11 @@ header {
   // background-color: var(--main-color);
   display: grid;
   place-items: center;
-  background: rgb(24, 96, 148);
+  background: rgb(14, 73, 117);
   background: radial-gradient(
     circle,
-    rgba(24, 96, 148, 1) 0%,
-    var(--main-color) 100%
+    rgba(14, 73, 117, 1) 0%,
+    rgba(30, 47, 65, 1) 50%
   );
   .container {
     // margin-top: 150px;
@@ -220,7 +224,7 @@ header {
     justify-content: space-between;
     align-items: center;
     .car-hero {
-      height: 500px;
+      height: 750px;
     }
   }
   .header-bg {
@@ -352,13 +356,14 @@ header {
   background-color: var(--main-color);
   // color: var(--secondery-color);
   padding-bottom: 200px;
+  position: relative;
   .container {
     .grid {
       // margin-top: 50px;
       display: grid;
       grid-template-columns: 70% 30%;
       gap: 5%;
-      width:75%;
+      width: 75%;
       margin: auto;
       .details {
         padding: 20px;
@@ -502,6 +507,21 @@ header {
       }
     }
   }
+  .transtion-image {
+    position: absolute;
+    z-index: 9;
+    &.plate {
+      width: 400px;
+      right: -30px;
+    }
+    &.transition {
+      bottom: 0px;
+      width: 200px;
+      left: 50%;
+      // transform: translateX(-50%);
+      transform: translate(-50%, 50%);
+    }
+  }
 }
 .strength_points {
   background-color: #cbbead;
@@ -531,7 +551,9 @@ header {
     .flex {
       position: relative;
       justify-content: space-between;
+      margin-top: 50px;
       > .flex-vertical {
+        width: 30%;
         gap: 50px;
         .feature {
           position: relative;
@@ -590,8 +612,7 @@ header {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 400px;
-        height: 600px;
+        height: 800px;
         object-fit: contain;
       }
     }
@@ -600,10 +621,11 @@ header {
 .slider {
   position: relative;
   top: 150px;
+  max-width: 90%;
+  margin: auto;
   .container {
     width: fit-content;
   }
-
   .flex {
     height: 600px;
     justify-content: center;
@@ -646,6 +668,7 @@ header {
         color: var(--main-color);
       }
       button {
+        margin-top: 50px;
         background-color: var(--secondery-color);
         transition: 0.3s;
         border-color: var(--secondery-color);
@@ -741,7 +764,7 @@ header {
   z-index: 8;
 }
 .testmonials {
-  background-color: white;
+  background-color: #f0f4f4;
   margin-bottom: 0px;
   padding: 0px 0px 50px;
   position: relative;
@@ -753,6 +776,7 @@ header {
     &.orange-juice {
       top: 30%;
       left: 0px;
+      z-index: 2;
     }
     &.red-orange {
       top: 130px;
@@ -767,7 +791,7 @@ header {
       right: 0px;
     }
     &.orange {
-      top: 180px;
+      top: 120px;
       right: 0px;
     }
     &.count-number {
@@ -789,7 +813,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    // flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin-top: 200px;
     gap: 50px;
     z-index: 2;
 
@@ -818,7 +843,8 @@ header {
       background-color: white;
       padding: 50px;
       border-radius: 16px;
-
+      z-index: 2;
+      max-width: 600px;
       .flex {
         gap: 30px;
         align-items: center;
@@ -849,6 +875,10 @@ header {
     }
   }
   .display {
+    // background-image: url("./images/count number.png");
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
     margin: 150px auto;
     position: relative;
     height: 375px;
@@ -858,15 +888,21 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      // left: 0px;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      max-width: 100%;
+    .clients-count {
+      max-width: 800px;
+      width: 90%;
+      display: block;
+      z-index: -1;
     }
+    // img {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   // left: 0px;
+    //   transform: translate(-50%, -50%);
+    //   z-index: 1;
+    //   max-width: 100%;
+    // }
     .content {
       z-index: 2;
       p {
@@ -954,6 +990,14 @@ footer {
   color: var(--main-color);
   background-color: var(--secondery-color);
   .container {
+    hr {
+      border: none;
+      height: 1px;
+      background-color: var(--main-color);
+    }
+    .logo {
+      width: 250px;
+    }
     position: relative;
     > img {
       position: absolute;
@@ -965,7 +1009,7 @@ footer {
   }
   .offer {
     align-items: center;
-    height: 250px;
+    height: auto;
     flex-direction: row;
     button {
       border: 2px solid var(--main-color);
@@ -984,7 +1028,7 @@ footer {
         margin-top: 50px;
         font-size: var(--xlarge);
         font-weight: bold;
-        color: #c8aff5;
+        color: var(--main-color);
       }
     }
   }
@@ -1033,15 +1077,19 @@ footer {
     }
   }
   header {
-    .car-hero {
-      top: 70%;
-    }
     .container {
+      .car-hero {
+        top: 70%;
+        height: 600px;
+      }
       .card {
         gap: 15px;
         padding: 15px;
         border-radius: 20px;
         z-index: 3;
+      }
+      p.hero {
+        font-size: 50px;
       }
     }
   }
@@ -1053,6 +1101,15 @@ footer {
           .car {
             max-width: 100%;
           }
+        }
+      }
+    }
+  }
+  .strength_points {
+    .container {
+      .flex {
+        > img {
+          height: 700px;
         }
       }
     }
@@ -1166,7 +1223,6 @@ footer {
       }
     }
   }
-
   .strength_points {
     padding-top: 30px;
     .container {
@@ -1190,7 +1246,7 @@ footer {
       .text {
         background-position: left;
         margin-top: 0px;
-        width: 80%;
+        width: 100%;
         border-bottom-left-radius: 0px;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
@@ -1203,12 +1259,13 @@ footer {
           align-items: center;
           width: 100%;
           button {
+            margin: 0px 40px 0px 0px;
             height: fit-content;
           }
         }
       }
       .slider-container {
-        width: 80%;
+        width: 100%;
         .before-after {
           flex-direction: row;
         }
@@ -1217,11 +1274,12 @@ footer {
   }
   .testmonials {
     margin-bottom: 0px;
-    padding: 180px 0px;  .hovering-images {
+    padding: 180px 0px;
+    .hovering-images {
       position: absolute;
       z-index: 1;
       &.orange-juice {
-        top: 30%;
+        top: 60%;
         left: 0px;
         width: 350px;
       }
@@ -1268,15 +1326,6 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // left: 0px;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        max-width: 100%;
-      }
       .content {
         z-index: 2;
         p {
@@ -1467,7 +1516,7 @@ footer {
             }
 
             img {
-              width: 100%;  
+              width: 100%;
               border-radius: 8px;
             }
           }
@@ -1542,15 +1591,6 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // left: 0px;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        max-width: 100%;
-      }
       .content {
         z-index: 2;
         p {

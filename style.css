@@ -9,8 +9,9 @@
 
 :root {
   --main-font-color: WHITE;
-  --main-color: #1c3247;
+  --main-color: #1e2f41;
   --secondery-color: ORANGE;
+  --secondery-color: #f1801f;
   --dark-blue: #203066;
   --lighter-blue: #385bd4;
   --position: 50%;
@@ -204,18 +205,21 @@ body {
 }
 
 nav {
-  border-bottom: 1px solid var(--lighter-blue);
-  border-bottom: 1px solid var(--secondery-color);
+  border-bottom: 1px solid #f1801f;
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 99;
   width: 100%;
-  background-color: orange;
+  background-color: #f1801f;
 }
 
 nav .container {
   padding: 0px 8px;
+}
+
+nav .container .logo {
+  width: 180px;
 }
 
 nav .container .menu {
@@ -268,8 +272,8 @@ header {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background: #186094;
-  background: radial-gradient(circle, #186094 0%, var(--main-color) 100%);
+  background: #0e4975;
+  background: radial-gradient(circle, #0e4975 0%, #1e2f41 50%);
 }
 
 header .container {
@@ -285,7 +289,7 @@ header .container {
 }
 
 header .container .car-hero {
-  height: 500px;
+  height: 750px;
 }
 
 header .header-bg {
@@ -431,6 +435,7 @@ header .steps p::before {
 .experience {
   background-color: var(--main-color);
   padding-bottom: 200px;
+  position: relative;
 }
 
 .experience .container .grid {
@@ -588,6 +593,24 @@ header .steps p::before {
   width: 90px;
 }
 
+.experience .transtion-image {
+  position: absolute;
+  z-index: 9;
+}
+
+.experience .transtion-image.plate {
+  width: 400px;
+  right: -30px;
+}
+
+.experience .transtion-image.transition {
+  bottom: 0px;
+  width: 200px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
 .strength_points {
   background-color: #cbbead;
   padding-top: 150px;
@@ -622,9 +645,11 @@ header .steps p::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 50px;
 }
 
 .strength_points .container .flex > .flex-vertical {
+  width: 30%;
   gap: 50px;
 }
 
@@ -695,8 +720,7 @@ header .steps p::before {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 400px;
-  height: 600px;
+  height: 800px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -704,6 +728,8 @@ header .steps p::before {
 .slider {
   position: relative;
   top: 150px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .slider .container {
@@ -769,6 +795,7 @@ header .steps p::before {
 }
 
 .slider .flex .text button {
+  margin-top: 50px;
   background-color: var(--secondery-color);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -882,7 +909,7 @@ header .steps p::before {
 }
 
 .testmonials {
-  background-color: white;
+  background-color: #f0f4f4;
   margin-bottom: 0px;
   padding: 0px 0px 50px;
   position: relative;
@@ -898,6 +925,7 @@ header .steps p::before {
 .testmonials .hovering-images.orange-juice {
   top: 30%;
   left: 0px;
+  z-index: 2;
 }
 
 .testmonials .hovering-images.red-orange {
@@ -916,7 +944,7 @@ header .steps p::before {
 }
 
 .testmonials .hovering-images.orange {
-  top: 180px;
+  top: 120px;
   right: 0px;
 }
 
@@ -943,6 +971,11 @@ header .steps p::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 200px;
   gap: 50px;
   z-index: 2;
 }
@@ -981,6 +1014,8 @@ header .steps p::before {
   background-color: white;
   padding: 50px;
   border-radius: 16px;
+  z-index: 2;
+  max-width: 600px;
 }
 
 .testmonials .comment .card .flex {
@@ -1038,14 +1073,11 @@ header .steps p::before {
           flex-direction: column;
 }
 
-.testmonials .display img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-  max-width: 100%;
+.testmonials .display .clients-count {
+  max-width: 800px;
+  width: 90%;
+  display: block;
+  z-index: -1;
 }
 
 .testmonials .display .content {
@@ -1161,6 +1193,16 @@ footer .container {
   position: relative;
 }
 
+footer .container hr {
+  border: none;
+  height: 1px;
+  background-color: var(--main-color);
+}
+
+footer .container .logo {
+  width: 250px;
+}
+
 footer .container > img {
   position: absolute;
   left: 50%;
@@ -1174,7 +1216,7 @@ footer .offer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 250px;
+  height: auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1199,7 +1241,7 @@ footer .offer div span {
   margin-top: 50px;
   font-size: var(--xlarge);
   font-weight: bold;
-  color: #c8aff5;
+  color: var(--main-color);
 }
 
 footer .contacts {
@@ -1249,8 +1291,9 @@ footer .copyrights button {
   nav .container .menu li a {
     padding: 16px 12px;
   }
-  header .car-hero {
+  header .container .car-hero {
     top: 70%;
+    height: 600px;
   }
   header .container .card {
     gap: 15px;
@@ -1258,11 +1301,17 @@ footer .copyrights button {
     border-radius: 20px;
     z-index: 3;
   }
+  header .container p.hero {
+    font-size: 50px;
+  }
   .experience {
     padding-top: 50px;
   }
   .experience .container .grid .image .car {
     max-width: 100%;
+  }
+  .strength_points .container .flex > img {
+    height: 700px;
   }
 }
 
@@ -1413,7 +1462,7 @@ footer .copyrights button {
   .slider .flex .text {
     background-position: left;
     margin-top: 0px;
-    width: 80%;
+    width: 100%;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
@@ -1440,12 +1489,13 @@ footer .copyrights button {
     width: 100%;
   }
   .slider .flex .text > div button {
+    margin: 0px 40px 0px 0px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .slider .flex .slider-container {
-    width: 80%;
+    width: 100%;
   }
   .slider .flex .slider-container .before-after {
     -webkit-box-orient: horizontal;
@@ -1462,7 +1512,7 @@ footer .copyrights button {
     z-index: 1;
   }
   .testmonials .hovering-images.orange-juice {
-    top: 30%;
+    top: 60%;
     left: 0px;
     width: 350px;
   }
@@ -1513,15 +1563,6 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .testmonials .display img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: 1;
-    max-width: 100%;
   }
   .testmonials .display .content {
     z-index: 2;
@@ -1828,15 +1869,6 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .testmonials .display img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    z-index: 1;
-    max-width: 100%;
   }
   .testmonials .display .content {
     z-index: 2;
