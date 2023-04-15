@@ -1310,6 +1310,9 @@ footer .copyrights button {
   .experience .container .grid .image .car {
     max-width: 100%;
   }
+  .experience .transtion-image.plate {
+    width: 400px;
+  }
   .strength_points .container .flex > img {
     height: 700px;
   }
@@ -1433,6 +1436,9 @@ footer .copyrights button {
   .experience .container .grid .image .shield img {
     width: 90px;
   }
+  .experience .transtion-image.plate {
+    display: none;
+  }
   .strength_points {
     padding-top: 30px;
   }
@@ -1445,6 +1451,9 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .strength_points .container .flex > img {
+    height: 600px;
   }
   .strength_points .container .flex .flex-vertical {
     width: 25%;
@@ -1505,13 +1514,14 @@ footer .copyrights button {
   }
   .testmonials {
     margin-bottom: 0px;
-    padding: 180px 0px;
+    padding: 0px 0px;
   }
   .testmonials .hovering-images {
     position: absolute;
     z-index: 1;
   }
   .testmonials .hovering-images.orange-juice {
+    z-index: 1;
     top: 60%;
     left: 0px;
     width: 350px;
@@ -1644,7 +1654,7 @@ footer .copyrights button {
 
 @media (max-width: 500px) {
   nav .container .logo {
-    width: 80px;
+    width: 135px;
   }
   nav div.flex {
     -webkit-box-orient: horizontal;
@@ -1653,7 +1663,7 @@ footer .copyrights button {
             flex-direction: row-reverse;
   }
   header {
-    height: 680px;
+    height: auto;
     padding-top: 200px;
   }
   header .container {
@@ -1669,7 +1679,7 @@ footer .copyrights button {
             transform: translateY(50%);
     left: 40%;
     margin-top: 65px;
-    width: 70%;
+    width: 90%;
     -o-object-fit: contain;
        object-fit: contain;
     margin-top: 65px;
@@ -1843,7 +1853,7 @@ footer .copyrights button {
   }
   .testmonials {
     margin-bottom: 0px;
-    padding: 330px 0px 50px;
+    padding: 150px 0px 50px;
   }
   .testmonials .container {
     margin-top: 0px;

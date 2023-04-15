@@ -1104,6 +1104,11 @@ footer {
         }
       }
     }
+    .transtion-image {
+      &.plate {
+        width: 400px;
+      }
+    }
   }
   .strength_points {
     .container {
@@ -1222,6 +1227,11 @@ footer {
         }
       }
     }
+    .transtion-image {
+      &.plate {
+        display: none;
+      }
+    }
   }
   .strength_points {
     padding-top: 30px;
@@ -1232,6 +1242,9 @@ footer {
       .flex {
         margin-top: 50px;
         flex-direction: row;
+        > img{
+          height: 600px;
+        }
         .flex-vertical {
           width: 25%;
         }
@@ -1274,11 +1287,12 @@ footer {
   }
   .testmonials {
     margin-bottom: 0px;
-    padding: 180px 0px;
+    padding: 0px 0px;
     .hovering-images {
       position: absolute;
       z-index: 1;
       &.orange-juice {
+        z-index: 1;
         top: 60%;
         left: 0px;
         width: 350px;
@@ -1394,7 +1408,7 @@ footer {
   nav {
     .container {
       .logo {
-        width: 80px;
+        width: 135px;
       }
     }
     div.flex {
@@ -1402,7 +1416,7 @@ footer {
     }
   }
   header {
-    height: 680px;
+    height: auto;
     padding-top: 200px;
     .container {
       flex-direction: column;
@@ -1411,7 +1425,7 @@ footer {
         transform: translateY(50%);
         left: 40%;
         margin-top: 65px;
-        width: 70%;
+        width: 90%;
         object-fit: contain;
         margin-top: 65px;
         transform: none;
@@ -1574,7 +1588,8 @@ footer {
   }
   .testmonials {
     margin-bottom: 0px;
-    padding: 330px 0px 50px;
+    padding: 150px 0px 50px;
+
     .container {
       margin-top: 0px;
     }
