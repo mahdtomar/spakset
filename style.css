@@ -294,8 +294,8 @@ header .container {
 
 header .container .car-hero {
   height: 750px;
-  -webkit-transform: translateX(-500px);
-          transform: translateX(-500px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
@@ -1464,20 +1464,94 @@ footer .copyrights button {
     padding-top: 30px;
   }
   .strength_points .container .header {
+    width: 90%;
     margin: auto;
   }
   .strength_points .container .flex {
-    margin-top: 50px;
+    margin-top: 30px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .strength_points .container .flex > .flex-vertical {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%;
+    gap: 50px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
+    text-align: center;
+    gap: 15px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature .number {
+    text-align: left;
+    font-weight: bold;
+    color: var(--secondery-color);
+    display: block;
+    width: 80%;
+  }
+  .strength_points .container .flex > .flex-vertical .feature .number::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: 30%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    background-color: var(--secondery-color);
+  }
+  .strength_points .container .flex > .flex-vertical .feature .name {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .strength_points .container .flex > .flex-vertical .feature img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature .number {
+    text-align: left;
+  }
+  .strength_points .container .flex > .flex-vertical:first-child .feature .number::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    right: 30%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    left: unset;
+    background-color: var(--secondery-color);
   }
   .strength_points .container .flex > img {
-    height: 600px;
-  }
-  .strength_points .container .flex .flex-vertical {
-    width: 25%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    width: 90%;
+    margin: 10px auto;
   }
   .slider {
     top: 50px;
@@ -1699,16 +1773,12 @@ footer .copyrights button {
   }
   header .container .car-hero {
     top: 60%;
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
     left: 40%;
     margin-top: 65px;
     width: 90%;
     -o-object-fit: contain;
        object-fit: contain;
     margin-top: 65px;
-    -webkit-transform: none;
-            transform: none;
     height: auto;
     margin-top: 0px;
   }
@@ -1778,6 +1848,9 @@ footer .copyrights button {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .strength_points .container .flex > .flex-vertical {
     -webkit-box-ordinal-group: 3;

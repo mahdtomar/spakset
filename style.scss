@@ -230,7 +230,7 @@ header {
       height: 750px;
       // position: relative;
       // left: -100%;
-      transform: translateX(-500px);
+      transform: translateX(-100%);
       transition: transform 0.4s;
       &.visible {
         // left: 0px;
@@ -1252,16 +1252,80 @@ footer {
     padding-top: 30px;
     .container {
       .header {
+        width: 90%;
         margin: auto;
       }
       .flex {
-        margin-top: 50px;
+        margin-top: 30px;
         flex-direction: row;
-        > img {
-          height: 600px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        > .flex-vertical {
+          order: 2;
+          width: 50%;
+          gap: 50px;
+          .feature {
+            position: relative;
+            align-items: flex-start;
+            width: 50%;
+            text-align: center;
+            gap: 15px;
+            .number {
+              text-align: left;
+              font-weight: bold;
+              color: var(--secondery-color);
+              display: block;
+              width: 80%;
+              &::before {
+                content: "";
+                width: 50%;
+                height: 1px;
+                position: absolute;
+                top: 9px;
+                right: 30%;
+                transform: translateX(50%);
+
+                background-color: var(--secondery-color);
+              }
+            }
+            .name {
+              color: white;
+              font-weight: bold;
+              font-size: 22px;
+            }
+
+            img {
+              width: 100%;
+              border-radius: 8px;
+            }
+          }
+          &:first-child {
+            .feature {
+              text-align: left;
+              align-items: flex-start;
+              .number {
+                text-align: left;
+                &::before {
+                  content: "";
+                  width: 50%;
+                  height: 1px;
+                  position: absolute;
+                  top: 9px;
+                  right: 30%;
+                  transform: translateX(50%);
+                  left: unset;
+                  background-color: var(--secondery-color);
+                }
+              }
+            }
+          }
         }
-        .flex-vertical {
-          width: 25%;
+        > img {
+          order: 1;
+          position: static;
+          transform: none;
+          width: 90%;
+          margin: 10px auto;
         }
       }
     }
@@ -1439,13 +1503,11 @@ footer {
       flex-direction: column;
       .car-hero {
         top: 60%;
-        transform: translateY(50%);
         left: 40%;
         margin-top: 65px;
         width: 90%;
         object-fit: contain;
         margin-top: 65px;
-        transform: none;
         height: auto;
         margin-top: 0px;
       }
@@ -1512,6 +1574,7 @@ footer {
         margin-top: 30px;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
         > .flex-vertical {
           order: 2;
           width: 50%;
