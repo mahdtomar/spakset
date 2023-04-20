@@ -523,8 +523,8 @@ header {
     z-index: 9;
     &.plate {
       width: 400px;
-      right: -530px;
-      transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
+      right: -330px;
+      transition: right 1s cubic-bezier(0.42, 0, 0, 1.02);
       &.visible {
         right: -30px;
       }
@@ -1709,5 +1709,22 @@ footer {
       padding: 30px 0px;
       flex-direction: column;
     }
+  }
+}
+.cls-1 {
+  stroke-dasharray: 4573;
+  animation: 10s fillsvg ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes fillsvg {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40%,60% {
+    stroke-dashoffset: 4573;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
   }
 }

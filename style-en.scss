@@ -1,0 +1,200 @@
+// .experience {
+//   background-color: var(--main-color);
+//   // color: var(--secondery-color);
+//   padding-bottom: 200px;
+//   position: relative;
+//   .container {
+//     .grid {
+//       // margin-top: 50px;
+//       display: grid;
+//       grid-template-columns: 70% 30%;
+//       gap: 5%;
+//       width: 75%;
+//       margin: auto;
+//       .details {
+//         padding: 20px;
+//         background-color: var(--secondery-color);
+//         // background-color: lightgray;
+//         border-radius: 30px;
+//         // .faded-text{}
+//         // span.intro {
+//         //   margin-left: 56px;
+//         //   color: white;
+//         //   position: relative;
+//         //   display: block;
+//         //   width: 80px;
+//         //   // font-size: 12px;
+//         //   text-transform: uppercase;
+//         //   font-weight: bold;
+//         //   margin-bottom: 30px;
+//         //   &::before {
+//         //     content: "";
+//         //     display: block;
+//         //     position: absolute;
+//         //     top: 50%;
+//         //     left: -90%;
+//         //     width: 50%;
+//         //     height: 2px;
+//         //     transform: translateY(-50%);
+//         //     background-color: var(--secondery-color);
+//         //   }
+//         // }
+//         p.heading {
+//           font-size: 56px;
+//           font-weight: bold;
+//           margin: 50px 0px 50px;
+//           color: white;
+//           // max-width: 500px;
+//         }
+//         span {
+//           font-weight: bold;
+//         }
+//         p.faded-text {
+//           line-height: 200%;
+//           // max-width: 600px;
+//           color: var(--main-color);
+//         }
+//         > .flex {
+//           margin-top: 50px;
+//           justify-content: left;
+//           gap: 100px;
+//           align-items: center;
+//           .main-button {
+//             background-color: white;
+//             color: var(--main-color);
+//           }
+//         }
+//         .feedback {
+//           // background-color: red;
+//           gap: 30px;
+//           width: 300px;
+//           line-height: 150%;
+//           padding: 9px;
+//         }
+//       }
+//       .image {
+//         // background-image: url("/images/carwash3-wrap-bg1.webp");
+//         background-size: cover;
+//         background-color: white;
+//         border-radius: 30px;
+//         background-repeat: no-repeat;
+//         color: var(--main-color);
+//         font-size: 1.5em;
+//         text-transform: capitalize;
+//         font-weight: bold;
+//         position: relative;
+//         // padding: 55px;
+//         overflow: hidden;
+//         .benifits {
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           justify-content: center;
+//           padding: 0px 20px;
+//           z-index: 3;
+//           p {
+//             margin: 20px 0px;
+//             &:nth-child(1) {
+//               color: var(--main-color);
+//             }
+//             &:nth-child(2) {
+//               color: var(--secondery-color);
+//             }
+//             &:nth-child(3) {
+//               color: red;
+//             }
+//             span {
+//               display: block;
+//               text-align: center;
+//               font-size: 1.6em;
+//               font-weight: bold;
+//               line-height: 40px;
+//               &.counter {
+//                 display: inline;
+//               }
+//             }
+//           }
+//         }
+//         .floating_images {
+//           position: absolute;
+//           z-index: 2;
+//           &.plate {
+//             bottom: -10px;
+//             left: -10px;
+//             transform: scale(0.9);
+//             opacity: 0.7;
+//           }
+//           &.burger {
+//             right: 0px;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             opacity: 0.8;
+//           }
+//         }
+//         span.important {
+//           font-size: 2em;
+//           text-transform: uppercase;
+//         }
+//         .shield {
+//           // background-color: #5575e7;
+//           display: block;
+//           text-align: center;
+//           width: 120px;
+//           height: 120px;
+//           display: grid;
+//           place-content: center;
+//           margin: 20px auto;
+//           // padding: 40px;
+//           // border-radius: 50%;
+//           img {
+//             width: 90px;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .transtion-image {
+//     position: absolute;
+//     z-index: 9;
+//     &.plate {
+//       width: 400px;
+//       right: -330px;
+//       transition: right 1s cubic-bezier(0.42, 0, 0, 1.02);
+//       &.visible {
+//         right: -30px;
+//       }
+//     }
+//     &.transition {
+//       bottom: 0px;
+//       width: 200px;
+//       left: 50%;
+//       // transform: translateX(-50%);
+//       transform: translate(-50%, 50%);
+//     }
+//   }
+// }
+.testmonials {
+  .container {
+    .comment {
+      .intro {
+        p {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+.experience {
+  .container {
+    .grid {
+      grid-template-columns: 85% 25%;
+      place-content: center;
+      text-align: left;
+      .details {
+        .flex {
+          justify-content: right;
+        }
+      }
+    }
+  }
+}

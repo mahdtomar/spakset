@@ -79,6 +79,19 @@ function navigation(e) {
       break;
   }
 }
+// function navigation(id) {
+//   console.log(id);
+//   const element = document.getElementById(id);
+//   // console.log(document.getElementById(id).offsetTop);
+//   window.scrollTo({
+//     top: id.offsetTop - 100,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+//   // window.moveTo(0, document.getElementById(id).clientHeight);
+//   console.log(window.scrollY);
+// }
+
 function increment(count, target, targervalue) {
   setInterval(() => {
     if (count < targervalue) {
@@ -137,7 +150,7 @@ const movingObserver = new IntersectionObserver(
       }
     });
   },
-  { thresholds: 1 }
+  { thresholds: 0.8 }
 );
 
 movingObserver.observe(foodRocket);

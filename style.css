@@ -615,9 +615,9 @@ header .steps p::before {
 
 .experience .transtion-image.plate {
   width: 400px;
-  right: -530px;
-  -webkit-transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
-  transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
+  right: -330px;
+  -webkit-transition: right 1s cubic-bezier(0.42, 0, 0, 1.02);
+  transition: right 1s cubic-bezier(0.42, 0, 0, 1.02);
 }
 
 .experience .transtion-image.plate.visible {
@@ -2000,6 +2000,38 @@ footer .copyrights button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.cls-1 {
+  stroke-dasharray: 4573;
+  -webkit-animation: 10s fillsvg ease-in-out;
+          animation: 10s fillsvg ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fillsvg {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40%, 60% {
+    stroke-dashoffset: 4573;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillsvg {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40%, 60% {
+    stroke-dashoffset: 4573;
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
