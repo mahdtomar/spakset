@@ -135,6 +135,10 @@ html {
     background-color: var(--secondery-color);
   }
 }
+.whatsapp-link {
+  text-decoration: none;
+  color: inherit;
+}
 .flex {
   display: flex;
   justify-content: space-between;
