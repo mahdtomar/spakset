@@ -7,6 +7,10 @@
   direction: rtl;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --main-font-color: WHITE;
   --main-color: #1e2f41;
@@ -290,6 +294,17 @@ header .container {
 
 header .container .car-hero {
   height: 750px;
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+header .container .car-hero.visible {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 header .header-bg {
@@ -600,6 +615,12 @@ header .steps p::before {
 
 .experience .transtion-image.plate {
   width: 400px;
+  right: -530px;
+  -webkit-transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
+  transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
+}
+
+.experience .transtion-image.plate.visible {
   right: -30px;
 }
 

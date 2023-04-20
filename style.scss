@@ -5,6 +5,9 @@
   font-family: "Almarai", sans-serif;
   direction: rtl;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   // --main-font-color: #223fa7;
   --main-font-color: WHITE;
@@ -225,6 +228,14 @@ header {
     align-items: center;
     .car-hero {
       height: 750px;
+      // position: relative;
+      // left: -100%;
+      transform: translateX(-500px);
+      transition: transform 0.4s;
+      &.visible {
+        // left: 0px;
+        transform: translateX(0px);
+      }
     }
   }
   .header-bg {
@@ -512,7 +523,11 @@ header {
     z-index: 9;
     &.plate {
       width: 400px;
-      right: -30px;
+      right: -530px;
+      transition: right 0.4s cubic-bezier(0.42, 0, 0, 1.02);
+      &.visible {
+        right: -30px;
+      }
     }
     &.transition {
       bottom: 0px;
@@ -1242,7 +1257,7 @@ footer {
       .flex {
         margin-top: 50px;
         flex-direction: row;
-        > img{
+        > img {
           height: 600px;
         }
         .flex-vertical {
