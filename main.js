@@ -82,14 +82,17 @@ obseveTargets.forEach((target) => {
   observer.observe(target);
 });
 
-const movingObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.add("visible");
-    if (entry.isIntersecting) {
-      movingObserver.unobserve(entry.target);
-    }
-  });
-},{thresholds :.65});
+const movingObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.add("visible");
+      if (entry.isIntersecting) {
+        movingObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { thresholds: 0.65 }
+);
 
 movingObserver.observe(foodRocket);
 movingObserver.observe(woodenPlate);
