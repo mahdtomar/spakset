@@ -173,6 +173,7 @@
 //     }
 //   }
 // }
+
 .testmonials {
   .container {
     .comment {
@@ -187,7 +188,7 @@
 .experience {
   .container {
     .grid {
-      grid-template-columns: 85% 25%;
+      //   grid-template-columns: 85% 25%;
       place-content: center;
       text-align: left;
       .details {

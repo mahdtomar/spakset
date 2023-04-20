@@ -1270,6 +1270,7 @@ footer {
     top: 50px;
     .flex {
       height: auto;
+      max-width: 100%;
       flex-direction: column;
       .text {
         background-position: left;
@@ -1286,6 +1287,7 @@ footer {
           justify-content: space-between;
           align-items: center;
           width: 100%;
+          flex-wrap: wrap;
           button {
             margin: 0px 40px 0px 0px;
             height: fit-content;
@@ -1720,7 +1722,8 @@ footer {
   0% {
     stroke-dashoffset: 0;
   }
-  40%,60% {
+  40%,
+  60% {
     stroke-dashoffset: 4573;
   }
 

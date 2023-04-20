@@ -3,8 +3,6 @@
 }
 
 .experience .container .grid {
-  -ms-grid-columns: 85% 25%;
-      grid-template-columns: 85% 25%;
   place-content: center;
   text-align: left;
 }
@@ -13,37 +11,5 @@
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-}
-
-.cls-1 {
-  stroke-dasharray: 4573;
-  -webkit-animation: 10s fillsvg ease-in-out;
-          animation: 10s fillsvg ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fillsvg {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40%, 60% {
-    stroke-dashoffset: 4573;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fillsvg {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40%, 60% {
-    stroke-dashoffset: 4573;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
 }
 /*# sourceMappingURL=style-en.css.map */

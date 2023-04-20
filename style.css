@@ -1484,6 +1484,7 @@ footer .copyrights button {
   }
   .slider .flex {
     height: auto;
+    max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1517,6 +1518,8 @@ footer .copyrights button {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .slider .flex .text > div button {
     margin: 0px 40px 0px 0px;
@@ -2015,7 +2018,8 @@ footer .copyrights button {
   0% {
     stroke-dashoffset: 0;
   }
-  40%, 60% {
+  40%,
+  60% {
     stroke-dashoffset: 4573;
   }
   100% {
@@ -2027,7 +2031,8 @@ footer .copyrights button {
   0% {
     stroke-dashoffset: 0;
   }
-  40%, 60% {
+  40%,
+  60% {
     stroke-dashoffset: 4573;
   }
   100% {
