@@ -1941,6 +1941,9 @@ footer .copyrights button {
     padding: 30px;
     width: 90%;
   }
+  .slider .flex .text > div button {
+    margin: 0px;
+  }
   .slider .flex .slider-container {
     width: 90%;
   }

@@ -1656,6 +1656,11 @@ footer {
       .text {
         padding: 30px;
         width: 90%;
+        > div {
+          button {
+            margin: 0px;
+          }
+        }
       }
       .slider-container {
         width: 90%;
